@@ -1,6 +1,5 @@
-# Porus
 
-**Developed by Thread IoT**
+**Developed by Thread IoT** main.thread.iot@gmail.com
 
 Porus is a versatile utility tool designed to assist developers and IT professionals with a range of functionalities. With its user-friendly interface and powerful features, Porus provides efficient solutions for networking, security, data transformation, and more.
 
