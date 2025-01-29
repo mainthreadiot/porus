@@ -20,7 +20,6 @@ Porus is a versatile utility tool designed to assist developers and IT professio
   - **Remote Address**
   - **Remote Port**
   - **Kill Process Button**
-![image](https://github.com/user-attachments/assets/12eb0305-e30e-4232-8277-f6822e8d9c8b)
 
 
 ### 2. Port Checker
