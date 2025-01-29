@@ -20,11 +20,12 @@ Porus is a versatile utility tool designed to assist developers and IT professio
   - **Remote Address**
   - **Remote Port**
   - **Kill Process Button**
-![image](https://github.com/user-attachments/assets/f0397e55-c937-4c54-b0ea-999e8f771f57)
+![image](https://github.com/user-attachments/assets/12eb0305-e30e-4232-8277-f6822e8d9c8b)
+
 
 ### 2. Port Checker
 - Checks if a specific port is open or closed.
-![image](https://github.com/user-attachments/assets/567b3118-406b-4045-8d67-8dee8aae2cff)
+![image](https://github.com/user-attachments/assets/c91cd5f4-90b3-4f80-b50f-33bfb80bde32)
 
 
 ### 3. Checksum Calculator
