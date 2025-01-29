@@ -24,7 +24,8 @@ Porus is a versatile utility tool designed to assist developers and IT professio
 
 ### 2. Port Checker
 - Checks if a specific port is open or closed.
-![image](https://github.com/user-attachments/assets/677b602f-e4f5-44cc-b5c7-3bb1593eb155)
+![image](https://github.com/user-attachments/assets/567b3118-406b-4045-8d67-8dee8aae2cff)
+
 
 ### 3. Checksum Calculator
 - Supports multiple checksum algorithms:
