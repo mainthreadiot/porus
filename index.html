@@ -8,9 +8,11 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background-color: #f4f4f9;
-            color: #333;
         }
         header {
             background-color: #0078d7;
@@ -51,16 +53,19 @@
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
-        } table {
-            width: 100%;
+        }  table {
+            width: 80%;
+            max-width: 900px;
             border-collapse: collapse;
-            margin-bottom: 20px;
             background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
         th, td {
             border: 1px solid #ddd;
             text-align: left;
-            padding: 8px;
+            padding: 10px;
         }
         th {
             background-color: #007BFF;
