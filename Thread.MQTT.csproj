@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Costura.Fody.6.0.0\build\Costura.Fody.props" Condition="Exists('packages\Costura.Fody.6.0.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1502EDDD-18EF-48E0-9E8C-99F390A06BA5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Porus</RootNamespace>
+    <AssemblyName>Porus</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>checksum.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MQTTnet, Version=3.0.15.0, Culture=neutral, PublicKeyToken=b69712f52770c0a7, processorArchitecture=MSIL">
+      <HintPath>packages\MQTTnet.3.0.15\lib\net452\MQTTnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\portable-net40+sl4+win8+wp8\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.10.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.10\lib\net45\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.10.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.10\lib\net45\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base64Conversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base64Conversion.Designer.cs">
+      <DependentUpon>Base64Conversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateButtonForm.Designer.cs">
+      <DependentUpon>CreateButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTP.Designer.cs">
+      <DependentUpon>FTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License.Designer.cs">
+      <DependentUpon>License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QRCode.Designer.cs">
+      <DependentUpon>QRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Barcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barcode.Designer.cs">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checksum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checksum.Designer.cs">
+      <DependentUpon>Checksum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MQTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MQTT.Designer.cs">
+      <DependentUpon>MQTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortChecker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PortChecker.Designer.cs">
+      <DependentUpon>PortChecker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PortScanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PortScanner.Designer.cs">
+      <DependentUpon>PortScanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PortScannerClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Publisher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Publisher.Designer.cs">
+      <DependentUpon>Publisher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SerailCommunication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SerailCommunication.Designer.cs">
+      <DependentUpon>SerailCommunication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Socket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Socket.Designer.cs">
+      <DependentUpon>Socket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscriber.Designer.cs">
+      <DependentUpon>Subscriber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCP.Designer.cs">
+      <DependentUpon>TCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCPServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TCPServer.Designer.cs">
+      <DependentUpon>TCPServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thread.MQTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thread.MQTT.Designer.cs">
+      <DependentUpon>Thread.MQTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UDP.Designer.cs">
+      <DependentUpon>UDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UDPServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UDPServer.Designer.cs">
+      <DependentUpon>UDPServer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base64Conversion.resx">
+      <DependentUpon>Base64Conversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateButtonForm.resx">
+      <DependentUpon>CreateButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTP.resx">
+      <DependentUpon>FTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License.resx">
+      <DependentUpon>License.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QRCode.resx">
+      <DependentUpon>QRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barcode.resx">
+      <DependentUpon>Barcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checksum.resx">
+      <DependentUpon>Checksum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MQTT.resx">
+      <DependentUpon>MQTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PortChecker.resx">
+      <DependentUpon>PortChecker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PortScanner.resx">
+      <DependentUpon>PortScanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Publisher.resx">
+      <DependentUpon>Publisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SerailCommunication.resx">
+      <DependentUpon>SerailCommunication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Socket.resx">
+      <DependentUpon>Socket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscriber.resx">
+      <DependentUpon>Subscriber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCP.resx">
+      <DependentUpon>TCP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TCPServer.resx">
+      <DependentUpon>TCPServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thread.MQTT.resx">
+      <DependentUpon>Thread.MQTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UDP.resx">
+      <DependentUpon>UDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UDPServer.resx">
+      <DependentUpon>UDPServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subscribe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\publish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checksum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-01-27 234741.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-01-28 002136.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-01-28 002136.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TCP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UDP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ftp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QRCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firewall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\json.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\packet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\de3ac89d92894c7983e2bd1067a99676.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThreadIoT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PortChecker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PortScanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MQTT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TCPUDPSERIAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checksum1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QRCode1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="checksum.ico" />
+    <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Costura.Fody.6.0.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.6.0.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('packages\Costura.Fody.6.0.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.6.0.0\build\Costura.Fody.targets'))" />
+  </Target>
+  <Import Project="packages\Costura.Fody.6.0.0\build\Costura.Fody.targets" Condition="Exists('packages\Costura.Fody.6.0.0\build\Costura.Fody.targets')" />
+</Project>
