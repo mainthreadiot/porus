@@ -1,5 +1,17 @@
 
 **Developed by Thread IoT** main.thread.iot@gmail.com
+# Porus Utility - All-in-One IoT & Networking Tool
+
+**Porus Utility** is a free and open-source C# tool for IoT developers and network administrators. It includes features like:
+- ✅ **Port Scanner & Port Checker**
+- ✅ **Checksum Generator**-
+- ✅ **Packet Sniffer**
+- ✅ **MQTT, TCP, UDP, and Serial Communication with firmware upgrade**
+- ✅ **Barcode & QR Code Generator**
+
+🔗 **Download Now**: [GitHub Repository](https://mainthreadiot.github.io/porus/)
+
+---
 
 Porus is a versatile utility tool designed to assist developers and IT professionals with a range of functionalities. With its user-friendly interface and powerful features, Porus provides efficient solutions for networking, security, data transformation, and more.
 ![image](https://github.com/user-attachments/assets/4491b209-f78f-450c-863d-f04406729604)
