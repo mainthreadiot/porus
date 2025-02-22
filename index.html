@@ -3,284 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porus - Utility Tool</title>
+    <meta name="description" content="Porus - The ultimate utility tool for developers, network engineers, and IoT enthusiasts. Scan, manage, and communicate effortlessly.">
+    <meta name="keywords" content="Porus, utility tool, port scanner, checksum, QR code, IoT tools, network tools, developers">
+    <meta name="author" content="Thread IoT">
+    <title>Porus - The Ultimate Utility Tool</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
+            color: #333;
         }
+
         header {
-            background-color: #0078d7;
+            background: linear-gradient(135deg, #0078d7, #005bb5);
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 2rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+
         header h1 {
             margin: 0;
+            font-size: 2.5rem;
         }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #0078d7;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #005bb5;
+            color: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
         .container {
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
+
         .feature {
             background: white;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
             overflow: hidden;
-            width: 100%;
-            max-width: 800px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
         .feature img {
             width: 100%;
-            max-height: 100%;
+            height: 200px;
             object-fit: cover;
         }
+
         .feature-content {
-            padding: 1rem;
+            padding: 1.5rem;
         }
+
         .feature-content h2 {
-            margin-top: 0;
             color: #0078d7;
+            margin: 0 0 0.5rem;
         }
+
+        .feature-content p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
         table {
-            width: 80%;
-            max-width: 100%;
+            width: 90%;
+            margin: 2rem auto;
             border-collapse: collapse;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
             border-radius: 8px;
             overflow: hidden;
-            margin: 2rem auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         th, td {
             border: 1px solid #ddd;
             text-align: left;
-            padding: 10px;
+            padding: 12px;
         }
+
         th {
-            background-color: #007BFF;
+            background-color: #0078d7;
             color: white;
         }
+
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
-        tr:hover {
-            background-color: #f1f1f1;
-        }
+
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 2rem 1rem;
             margin-top: 2rem;
-        } .contact {
-            margin-top: 2rem;
-            text-align: center;
-            background-color: #fff;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 800px;
         }
-        .contact h2 {
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
             color: #0078d7;
-            margin-bottom: 0.5rem;
-        } .button {
-        display: inline-block;
-        background-color: #0078d7;
-        color: white;
-        text-decoration: none;
-        font-size: 1.5rem;
-        padding: 10px 20px;
-        border-radius: 8px;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .button:hover {
-        background-color: #005bb5;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
-    .button:active {
-        background-color: #004494;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    }
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Porus - The Ultimate Utility Tool</h1>
-       <a href="https://www.dropbox.com/scl/fi/elv0t11oodm5c09onjp3a/Porus.rar?rlkey=eeznourkh0aocpkco6opac3v2&st=e7emzlw2&dl=0" 
-   download 
-   style="display: inline-block; text-decoration: none; background-color: white; color: black; padding: 10px 20px; border: 2px solid black; border-radius: 5px; text-align: center; font-size: 16px;">
-   <h2 style="margin: 0; color: black;">Download Utility</h2>
-</a>
- 
-     <h5>
-    Extract the Porus folder and double-click on Porus.exe. Contact us at 
-    <a href="mailto:main.thread.iot@gmail.com">main.thread.iot@gmail.com</a>
-</h5>
+    <a href="https://www.dropbox.com/scl/fi/elv0t11oodm5c09onjp3a/Porus.rar?rlkey=eeznourkh0aocpkco6opac3v2&st=e7emzlw2&dl=0" class="cta-button">Download Porus Utility</a>
+    <p>Extract the Porus folder and double-click on Porus.exe. Contact us at <a href="mailto:main.thread.iot@gmail.com">main.thread.iot@gmail.com</a>.</p>
 </header>
-  
-    <table>
-        <thead>
-            <tr>
-                <th>Functionality</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Port Scanner</td>
-                <td>Scan and list ports on a network or device with status.</td>
-            </tr>
-            <tr>
-                <td>Port Checker</td>
-                <td>Check the status of specific ports (open/closed).</td>
-            </tr>
-             <tr>
-                <td>Packet Sniffer</td>
-                <td>Capturing Network Traffic</td>
-            </tr>
-            <tr>
-                <td>Checksum</td>
-                <td>Calculate and verify data integrity using checksum algorithms.</td>
-            </tr>
-            <tr>
-                <td>TCP Socket</td>
-                <td>Manage TCP socket connections for communication.</td>
-            </tr>
-            <tr>
-                <td>MQTT</td>
-                <td>Implement MQTT protocol for lightweight messaging.</td>
-            </tr>
-            <tr>
-                <td>TCP Client Server</td>
-                <td>Set up and manage a TCP client-server communication.</td>
-            </tr>
-            <tr>
-                <td>UDP</td>
-                <td>Handle communication using UDP protocol.</td>
-            </tr>
-            <tr>
-                <td>Serial Communication</td>
-                <td>Send and receive data through serial ports.</td>
-            </tr>
-            <tr>
-                <td>Barcode Conversion</td>
-                <td>Convert data to barcodes and decode them.</td>
-            </tr>
-            <tr>
-                <td>QR Code Conversion</td>
-                <td>Generate and decode QR codes from data.</td>
-            </tr>
-            <tr>
-                <td>Base64 Conversion</td>
-                <td>Encode and decode data using Base64 format.</td>
-            </tr>
-        </tbody></table>
-<div class="container">    
-    <div class="feature">      
+
+<table>
+    <thead>
+        <tr>
+            <th>Functionality</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Port Scanner</td>
+            <td>Scan and list ports on a network or device with status.</td>
+        </tr>
+        <tr>
+            <td>Port Checker</td>
+            <td>Check the status of specific ports (open/closed).</td>
+        </tr>
+        <tr>
+            <td>Packet Sniffer</td>
+            <td>Capture network traffic and analyze it.</td>
+        </tr>
+        <tr>
+            <td>Checksum</td>
+            <td>Calculate and verify data integrity using checksum algorithms.</td>
+        </tr>
+        <tr>
+            <td>MQTT</td>
+            <td>Implement MQTT protocol for lightweight messaging.</td>
+        </tr>
+        <tr>
+            <td>TCP Client Server</td>
+            <td>Set up and manage a TCP client-server communication.</td>
+        </tr>
+        <tr>
+            <td>UDP</td>
+            <td>Handle communication using the UDP protocol.</td>
+        </tr>
+        <tr>
+            <td>QR Code Conversion</td>
+            <td>Generate and decode QR codes from data.</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="container">
+    <div class="feature">
+        <img src="PortScanner.png" alt="Port Scanner Tool">
         <div class="feature-content">
             <h2>Port Scanner</h2>
-            <p>Efficiently scans and provides detailed port information such as address, port, state, protocol, and process details.</p>
+            <p>Efficiently scans and provides detailed port information such as address, state, protocol, and process details.</p>
         </div>
-          <img src="PortScanner.png" alt="Port Scanner">
     </div>
-
-    <div class="feature">        
+    <div class="feature">
+        <img src="portchecker.png" alt="Port Checker Tool">
         <div class="feature-content">
             <h2>Port Checker</h2>
             <p>Quickly checks if specific ports are open or closed, ensuring seamless connectivity.</p>
         </div>
-        <img src="portchecker.png" alt="Port Checker">
-    </div>
-
-    <div class="feature">        
-        <div class="feature-content">
-            <h2>Checksum Calculator</h2>
-            <p>Calculate checksums using various algorithms such as Simple Checksum, CRC32, MD5, and SHA256.</p>
-        </div>
-        <img src="checksum.png" alt="Checksum Calculator">
-    </div>
-
-    <div class="feature">
-        <div class="feature-content">
-            <h2>MQTT Utility</h2>
-            <p>Handles MQTT connections, supports multiple connections, and enables publishing and subscribing to messages.</p>
-        </div>
-                <img src="mqtt.png" alt="MQTT Utility">
-    </div>
-
-    <div class="feature">    
-        <div class="feature-content">
-            <h2>TCP Server and Client</h2>
-            <p>Create and manage TCP server and client connections seamlessly.</p>
-        </div>
-        <img src="tcpclient.png" alt="TCP Server and Client">
-        <img src="tcpserver.png" alt="TCP Server and Client">
-    </div>
-
-    <div class="feature">
-        <div class="feature-content">
-            <h2>UDP Server and Client</h2>
-            <p>Facilitates UDP server and client communications efficiently.</p>
-        </div>
-        <img src="udpserver.png" alt="UDP Server and Client">
-        <img src="udpserver1.png" alt="UDP Server and Client">
-    </div>
-    <div class="feature">
-        <div class="feature-content">
-            <h2>QR Code Conversion</h2>
-            <p>Facilitates to convert string to QR code, QR Code to string and download QR code</p>
-        </div>        
-        <img src="Qrcode.png" alt="UDP Server and Client">
-    </div>
-      <div class="feature">
-        <div class="feature-content">
-            <h2>Barcode Conversion</h2>
-            <p>Facilitates to convert string to Barcode, Barcodee to string and download Barcodee</p>
-        </div>        
-          <img src="barcode.png" alt="UDP Server and Client">
-    </div>
-    <div class="feature">
-        <div class="feature-content">
-            <h2>Packet Sniffer</h2>
-            <p>Packet Sniffer</p>
-        </div>        
-          <img src="packetsniffer.png" alt="UDP Server and Client">
-    </div>
-<div class="feature">
-        <div class="feature-content">
-            <h2>Base 64 Conversion</h2>
-            <p>Convert string to base 64, image to base 64 and base64 to image</p>
-        </div>        
-          <img src="imagetobase.png" alt="UDP Server and Client">
-    </div>
-     <div class="feature">
-        <div class="feature-content">
-            <h2>Upcoming</h2>
-            <l>FTP,</l>
-            <l>Firewall Check,</l>
-            <l>Json Formatter,</l>
-            <l>Packet Snipper,</l>
-            <l>Modbus,</l>
-            <l>Camera View.</l>
-        </div>        
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2025 Thread IoT. All rights reserved.</p>
+    <p>© 2025 Thread IoT. All rights reserved.</p>
+    <p>Contact us at <a href="mailto:main.thread.iot@gmail.com">main.thread.iot@gmail.com</a></p>
 </footer>
 
 </body>
