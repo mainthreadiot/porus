@@ -1,0 +1,12 @@
+[
+  {
+    "Name": "Relay 1 On",
+    "Command": "Relay 1- On",
+    "TopicName": "TEST"
+  },
+  {
+    "Name": "Relay 1 Off",
+    "Command": "Relay 1 - Off",
+    "TopicName": "TEST"
+  }
+]

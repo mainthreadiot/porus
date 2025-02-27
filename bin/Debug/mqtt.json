@@ -1,0 +1,8 @@
+{
+  "Host": "broker.emqx.io",
+  "Port": "1883",
+  "ClientId": "80872d7b-8f81-4816-bd02-47773c8b4515",
+  "Protocol": "mqtt/tcp",
+  "Username": "",
+  "Password": ""
+}
