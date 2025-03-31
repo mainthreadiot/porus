@@ -72,17 +72,22 @@
                     }
                 });
 
+                if (!response.ok) {
+                    throw new Error("Server response wasn't OK");
+                }
+                
                 let result = await response.json();
                 if (result.output_url) {
                     let ghibliImg = new Image();
                     ghibliImg.src = result.output_url;
+                    ghibliImg.crossOrigin = "Anonymous";
                     ghibliImg.onload = function() {
                         canvas.width = ghibliImg.width;
                         canvas.height = ghibliImg.height;
                         ctx.drawImage(ghibliImg, 0, 0);
                     };
                 } else {
-                    alert("Failed to convert image.");
+                    alert("Failed to convert image. Response: " + JSON.stringify(result));
                 }
             } catch (error) {
                 alert("Error processing image: " + error.message);
