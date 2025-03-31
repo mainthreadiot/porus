@@ -64,18 +64,18 @@
             formData.append("image", document.getElementById('imageInput').files[0]);
 
             try {
-                let response = await fetch("https://api.craiyon.com/v1/generate", {
+                let response = await fetch("https://api.deepai.org/api/toonify", {
                     method: "POST",
-                    body: JSON.stringify({ "prompt": "Studio Ghibli style anime painting of uploaded image", "image": imgElement.src }),
+                    body: formData,
                     headers: {
-                        "Content-Type": "application/json"
+                        "api-key": "0412d233-a9de-4b40-aeff-4badbd283a32"
                     }
                 });
 
                 let result = await response.json();
-                if (result.images && result.images.length > 0) {
+                if (result.output_url) {
                     let ghibliImg = new Image();
-                    ghibliImg.src = "data:image/png;base64," + result.images[0];
+                    ghibliImg.src = result.output_url;
                     ghibliImg.onload = function() {
                         canvas.width = ghibliImg.width;
                         canvas.height = ghibliImg.height;
