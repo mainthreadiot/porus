@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghibli Art Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5dc;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ghibli Art Converter</h1>
+        <input type="file" id="imageInput" accept="image/*">
+        <br><br>
+        <img id="originalImage" src="" alt="Original Image" style="display:none;">
+        <canvas id="outputCanvas"></canvas>
+        <br>
+        <button onclick="applyGhibliEffect()">Convert to Ghibli Art</button>
+    </div>
+
+    <script>
+        let imgElement = document.getElementById('originalImage');
+        let canvas = document.getElementById('outputCanvas');
+        let ctx = canvas.getContext('2d');
+
+        document.getElementById('imageInput').addEventListener('change', function(event) {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                imgElement.src = e.target.result;
+                imgElement.style.display = 'block';
+                imgElement.onload = function() {
+                    canvas.width = imgElement.width;
+                    canvas.height = imgElement.height;
+                    ctx.drawImage(imgElement, 0, 0);
+                };
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        });
+
+        async function applyGhibliEffect() {
+            if (!imgElement.src) {
+                alert("Please upload an image first.");
+                return;
+            }
+
+            let formData = new FormData();
+            formData.append("image", document.getElementById('imageInput').files[0]);
+
+            try {
+                let response = await fetch("https://api.craiyon.com/v1/generate", {
+                    method: "POST",
+                    body: JSON.stringify({ "prompt": "Studio Ghibli style anime painting of uploaded image", "image": imgElement.src }),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                let result = await response.json();
+                if (result.images && result.images.length > 0) {
+                    let ghibliImg = new Image();
+                    ghibliImg.src = "data:image/png;base64," + result.images[0];
+                    ghibliImg.onload = function() {
+                        canvas.width = ghibliImg.width;
+                        canvas.height = ghibliImg.height;
+                        ctx.drawImage(ghibliImg, 0, 0);
+                    };
+                } else {
+                    alert("Failed to convert image.");
+                }
+            } catch (error) {
+                alert("Error processing image: " + error.message);
+            }
+        }
+    </script>
+</body>
+</html>
