@@ -1,0 +1,15 @@
+{
+  "name": "Porus Utility",
+  "short_name": "Porus",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#eef4fb",
+  "theme_color": "#0b2d52",
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

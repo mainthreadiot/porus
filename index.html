@@ -1,333 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Porus - The ultimate utility tool for developers, network engineers, and IoT enthusiasts. Scan, manage, and communicate effortlessly.">
-    <meta name="keywords" content="Porus, utility tool, port scanner, checksum, QR code, IoT tools, network tools, developers">
-    <meta name="author" content="Thread IoT">
-    <link rel="icon" href="icon/ThreadIoT.ico" type="image/x-icon">
-    <title>Porus - The Ultimate Utility Tool</title>
-   
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0078d7, #005bb5);
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: white;
-            color: #0078d7;
-            text-decoration: none;
-            padding: 12px 30px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 25px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #005bb5;
-            color: white;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .feature {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .feature img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .feature-content {
-            padding: 1.5rem;
-        }
-
-        .feature-content h2 {
-            color: #0078d7;
-            margin: 0 0 0.5rem;
-        }
-
-        .feature-content p {
-            margin: 0.5rem 0;
-            color: #555;
-        }
-
-        table {
-            width: 90%;
-            margin: 2rem auto;
-            border-collapse: collapse;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            text-align: left;
-            padding: 12px;
-        }
-
-        th {
-            background-color: #0078d7;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-        }
-
-        footer a {
-            color: #0078d7;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .cta-button {
-                font-size: 0.9rem;
-                padding: 10px 20px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Porus Utility | Thread-IoT IoT Diagnostics and Protocol Toolkit</title>
+  <meta name="description" content="Porus Utility by Thread-IoT is a Windows desktop toolkit for IoT developers with port scanning, TCP and UDP tools, MQTT workflows, BLE exploration, serial diagnostics, network analysis, firmware upgrade support, live plotting, checksum tools, barcode, and QR utilities.">
+  <meta name="keywords" content="Porus Utility, Porus, Thread-IoT, IoT developer tools, MQTT client, port scanner, TCP client, UDP client, serial communication, BLE explorer, firmware upgrade utility, network diagnostics">
+  <meta name="author" content="Thread-IoT">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0b2d52">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Porus Utility by Thread-IoT">
+  <meta property="og:description" content="A professional Windows toolkit for IoT diagnostics, protocol testing, MQTT, serial, BLE, networking, firmware workflows, and data utilities.">
+  <meta property="og:url" content="https://mainthreadiot.github.io/porus/">
+  <link rel="canonical" href="https://mainthreadiot.github.io/porus/">
+  <meta property="og:image" content="https://mainthreadiot.github.io/porus/assets/screenshots/dashboard.png">
+  <meta property="og:image:alt" content="Porus Utility dashboard screenshot">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Porus Utility by Thread-IoT">
+  <meta name="twitter:description" content="One Windows utility suite for network diagnostics, port validation, serial testing, BLE, MQTT, OTA workflows, and developer tooling.">
+  <meta name="twitter:image" content="https://mainthreadiot.github.io/porus/assets/screenshots/dashboard.png">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Porus Utility",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Windows",
+    "description": "Porus Utility by Thread-IoT is a desktop toolkit for IoT developers covering network diagnostics, TCP and UDP testing, MQTT workflows, BLE exploration, serial communication, firmware upgrade support, and device data utilities.",
+    "creator": {
+      "@type": "Organization",
+      "name": "Thread-IoT",
+      "url": "https://mainthreadiot.github.io/porus/"
+    },
+    "downloadUrl": "https://mainthreadiot.github.io/porus/downloads/Porus.exe",
+    "softwareVersion": "1.0.0",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 </head>
 <body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Porus Utility home">
+        <span class="brand-mark">P</span>
+        <span>
+          <strong>Porus Utility</strong>
+          <small>by Thread-IoT</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#workflows">Workflows</a>
+        <a href="#screens">Screens</a>
+        <a href="#download">Download</a>
+        <a href="mailto:main.thread.iot@gmail.com">main.thread.iot@gmail.com</a>
+      </nav>
+      <a class="button button-primary" id="download" href="./downloads/Porus.exe" download>Download Utility</a>
+    </div>
+  </header>
 
-<header>
-    <h1>Porus - The Ultimate Utility Tool</h1><hr>
-   
-    <a href="https://sourceforge.net/projects/porusutility/" class="cta-button">Download Porus Utility - Setup ( x64 ) from SourceForge</a>
-    <a href="https://www.dropbox.com/scl/fi/x2enpl2vx8jy4br45ce4g/Porus_BIN.7z?rlkey=kal5odnajbbugl1z6hh8yhx3h&st=dnwyfilg&dl=0" class="cta-button">Download Porus - BIN Utility ( x64 )</a>
-     <a href="https://www.dropbox.com/scl/fi/bhdydvyub45n0h5nvfmqk/Porus_Setup_x64.rar?rlkey=0qya4gr59llnlcxfgj2d05jxj&st=nyfxmaj8&dl=0" class="cta-button">Download Porus Utility - Setup ( x64 )</a>
-    <p>Porus - The ultimate utility tool for developers, network engineers, and IoT enthusiasts. Scan, manage, and communicate effortlessly. Contact us at <a href="mailto:main.thread.iot@gmail.com">main.thread.iot@gmail.com</a>.</p>
-</header>
- <a href="AboutUs.html"> About Company </a>
-    <a href="ThreadIoT.html"> Portfolio </a>
-<table>
-    <thead>
-        <tr>
-            <th>Functionality</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Port Scanner</td>
-            <td>Scan and list ports on a network or device with status.</td>
-        </tr>
-        <tr>
-            <td>Port Checker</td>
-            <td>Check the status of specific ports (open/closed).</td>
-        </tr>
-        <tr>
-            <td>Packet Sniffer</td>
-            <td>Capture network traffic and analyze it.</td>
-        </tr>
-        <tr>
-            <td>Checksum</td>
-            <td>Calculate and verify data integrity using checksum algorithms.</td>
-        </tr>
-        <tr>
-            <td>MQTT</td>
-            <td>Implement MQTT protocol for lightweight messaging.</td>
-        </tr>
-        <tr>
-            <td>TCP Client Server</td>
-            <td>Set up and manage a TCP client-server communication.<a href="https://www.dropbox.com/scl/fi/rkv3m6ohaowfm9clo08u8/TCPListener.exe?rlkey=e4y0ihuzkdvgbjts14nmig0lb&st=87td9orj&dl=0"> Download TCP Server light.</a></td>
-        </tr>
-        <tr>
-            <td>UDP</td>
-            <td>Handle communication using the UDP protocol.</td>
-        </tr>
-        <tr>
-            <td>QR Code Conversion</td>
-            <td>Generate and decode QR codes from data.</td>
-        </tr>
-        <tr>
-            <td>Bar Code Conversion</td>
-            <td>Generate and decode bar codes from data.</td>
-        </tr>
-        <tr>
-            <td>Serial Commuication</td>
-            <td>Connect and send - COM Port + upgrade firmware ( bin/hex file )</td>
-        </tr>
-         <tr>
-            <td>Base64 conversion</td>
-            <td>string to base64, image to base64 , base64 to image</td>
-        </tr>
-    </tbody>
-</table>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-stack">
+        <div class="hero-copy">
+          <p class="eyebrow">Thread-IoT Professional Toolkit</p>
+          <h1 class="hero-title-full">The Porus Utility dashboard puts your entire IoT lab on one screen.</h1>
+          <div class="hero-copy-grid">
+            <div class="hero-copy-main">
+              <p class="hero-text">Lead with the dashboard, move into any tool in one click, and keep network diagnostics, protocol testing, MQTT, serial labs, BLE inspection, firmware workflows, and payload utilities inside one professional Windows workspace.</p>
+            </div>
+            <div class="hero-copy-side">
+            <div class="hero-actions">
+                <a class="button button-primary" href="./downloads/Porus.exe" download>Download EXE</a>
+                <a class="button button-secondary" href="#screens">Explore Screens</a>
+              </div>
+            </div>
+          </div>
+          <ul class="hero-points">
+            <li>Dashboard-first experience for faster first impression and faster workflows</li>
+            <li>Built for TCP, UDP, MQTT, BLE, serial, and OTA workflows</li>
+            <li>Designed for debugging devices, gateways, and local labs</li>
+          </ul>
+        </div>
+        <figure class="hero-shot hero-shot-full">
+          <img src="./assets/screenshots/dashboard.png" alt="Porus Utility dashboard showing IoT diagnostics cards">
+          <figcaption>The main Porus Utility dashboard acts as the launch surface for diagnostics, protocol tools, connectivity checks, and developer workflows.</figcaption>
+        </figure>
+        <div class="hero-panel hero-metrics">
+          <div class="metric-card">
+            <span class="metric-icon icon-network" aria-hidden="true"></span>
+            <div>
+              <strong>Dashboard-first workflow</strong>
+              <p>Customers immediately see the full value of the suite from one clean control surface with ping, IP tools, internet status, and module access.</p>
+            </div>
+          </div>
+          <div class="metric-card">
+            <span class="metric-icon icon-chip" aria-hidden="true"></span>
+            <div>
+              <strong>Protocol coverage</strong>
+              <p>TCP, UDP, Serial, MQTT, BLE, and raw socket tooling for day-to-day embedded and edge validation.</p>
+            </div>
+          </div>
+          <div class="metric-card">
+            <span class="metric-icon icon-lab" aria-hidden="true"></span>
+            <div>
+              <strong>Bench-ready utilities</strong>
+              <p>Checksums, QR and barcode generation, live plotting, payload helpers, and macro automation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="container">
-    <div class="feature">
-        <img src="icon/PortScanner.png" alt="Port Scanner Tool">
-        <div class="feature-content">
-            <h2>Port Scanner</h2>
-            <p>Efficiently scans and provides detailed port information such as address, state, protocol, and process details.</p>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Why It Matters</p>
+          <h2>Start with the dashboard, then drill into the exact tool you need.</h2>
+          <p>IoT teams rarely debug one layer at a time. Porus Utility uses the dashboard as a high-value entry point, then connects transport checks, device messaging, adapter visibility, packet-level validation, and field-oriented tools into a single desktop suite so engineers can move faster with less context switching.</p>
         </div>
-    </div>
-    <div class="feature">
-        <img src="icon/portchecker.png" alt="Port Checker Tool">
-        <div class="feature-content">
-            <h2>Port Checker</h2>
-            <p>Quickly checks if specific ports are open or closed, ensuring seamless connectivity.</p>
+        <div class="value-grid">
+          <article class="value-card">
+            <h3>Faster root-cause analysis</h3>
+            <p>Move from IP availability to port state, then into payload transport and device response without switching tools.</p>
+          </article>
+          <article class="value-card">
+            <h3>More confidence in release validation</h3>
+            <p>Use structured desktop workflows for MQTT, TCP, UDP, serial communication, BLE discovery, and firmware operations.</p>
+          </article>
+          <article class="value-card">
+            <h3>Useful for labs and field support</h3>
+            <p>Operators, QA engineers, and firmware developers get one consistent toolkit for validation, diagnostics, and quick reproduction.</p>
+          </article>
         </div>
-    </div>
-    <div class="feature">
-        <img src="icon/packetsniffer.png" alt="Packet Sniffer Tool">
-        <div class="feature-content">
-            <h2>Packet Sniffer.png</h2>
-            <p>Capture network traffic and analyze it.</p>
-        </div>
-    </div>
+      </div>
+    </section>
 
-     <div class="feature">
-        <img src="icon/checksum.png" alt="Checksum">
-        <div class="feature-content">
-            <h2>Checksum</h2>
-            <p>Calculate simple checksum,CRC32,MD5,SHA-256.</p>
+    <section class="section section-tinted" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Capabilities</p>
+          <h2>Everything included in Porus Utility.</h2>
+          <p>Each module is designed as a focused workspace while still feeling part of one professional suite.</p>
         </div>
-    </div>
+        <div class="feature-grid">
+          <article class="feature-card accent-blue">
+            <span class="feature-icon icon-port"></span>
+            <h3>Port Checker</h3>
+            <p>Validate a single endpoint quickly with IP and port testing plus latency checks.</p>
+          </article>
+          <article class="feature-card accent-cyan">
+            <span class="feature-icon icon-search"></span>
+            <h3>Port Scanner</h3>
+            <p>Inspect open ports, protocol states, process IDs, and active connections with filters and sorting.</p>
+          </article>
+          <article class="feature-card accent-indigo">
+            <span class="feature-icon icon-tcp"></span>
+            <h3>TCP Client</h3>
+            <p>Connect to TCP endpoints, send payloads, and inspect server responses.</p>
+          </article>
+          <article class="feature-card accent-teal">
+            <span class="feature-icon icon-udp"></span>
+            <h3>TCP Server</h3>
+            <p>Run a local listener, monitor active clients, and export server activity logs.</p>
+          </article>
+          <article class="feature-card accent-violet">
+            <span class="feature-icon icon-udp"></span>
+            <h3>UDP Client</h3>
+            <p>Send datagrams, validate packet delivery paths, and review responses in one place.</p>
+          </article>
+          <article class="feature-card accent-purple">
+            <span class="feature-icon icon-udp"></span>
+            <h3>UDP Server</h3>
+            <p>Start a UDP listener, capture incoming traffic, and inspect session activity.</p>
+          </article>
+          <article class="feature-card accent-green">
+            <span class="feature-icon icon-serial"></span>
+            <h3>Serial Communication</h3>
+            <p>Work with COM ports, configure line settings, and exchange device messages from a clean desktop workflow.</p>
+          </article>
+          <article class="feature-card accent-lilac">
+            <span class="feature-icon icon-terminal"></span>
+            <h3>Serial Terminal Lab</h3>
+            <p>Inspect decoded text, raw hex, Base64 frames, timestamps, and saved send actions.</p>
+          </article>
+          <article class="feature-card accent-slate">
+            <span class="feature-icon icon-mqtt"></span>
+            <h3>MQTT Client</h3>
+            <p>Publish, subscribe, manage broker profiles, and control reusable payload flows for IoT messaging.</p>
+          </article>
+          <article class="feature-card accent-ocean">
+            <span class="feature-icon icon-ble"></span>
+            <h3>BLE Explorer</h3>
+            <p>Scan for Bluetooth endpoints and inspect GATT references for connected or simulated workflows.</p>
+          </article>
+          <article class="feature-card accent-amber">
+            <span class="feature-icon icon-socket"></span>
+            <h3>TCP Socket</h3>
+            <p>Open raw socket sessions for advanced endpoint troubleshooting and protocol experimentation.</p>
+          </article>
+          <article class="feature-card accent-rose">
+            <span class="feature-icon icon-firmware"></span>
+            <h3>Firmware Upgrade</h3>
+            <p>Prepare OTA workflows, manifests, integrity validation, and controlled upload steps with user confirmation.</p>
+          </article>
+          <article class="feature-card accent-ocean">
+            <span class="feature-icon icon-network"></span>
+            <h3>Network Details</h3>
+            <p>Summarize adapters, MAC addresses, IP details, DNS, and gateway visibility in compact cards.</p>
+          </article>
+          <article class="feature-card accent-cyan">
+            <span class="feature-icon icon-network"></span>
+            <h3>Live Variables</h3>
+            <p>Track device data in a more accessible form for monitoring and quick validation tasks.</p>
+          </article>
+          <article class="feature-card accent-rose">
+            <span class="feature-icon icon-tools"></span>
+            <h3>Live Plotting</h3>
+            <p>Visualize changing values for telemetry, diagnostics, and bench-side response analysis.</p>
+          </article>
+          <article class="feature-card accent-amber">
+            <span class="feature-icon icon-tools"></span>
+            <h3>Macro Automation</h3>
+            <p>Create repeatable test actions and bench sequences to reduce manual verification work.</p>
+          </article>
+          <article class="feature-card accent-amber">
+            <span class="feature-icon icon-tools"></span>
+            <h3>Checksum Tools</h3>
+            <p>Generate dependable integrity outputs for firmware, payloads, and validation workflows.</p>
+          </article>
+          <article class="feature-card accent-rose">
+            <span class="feature-icon icon-tools"></span>
+            <h3>Barcode</h3>
+            <p>Create and decode barcode content for asset, payload, or production support tasks.</p>
+          </article>
+          <article class="feature-card accent-lilac">
+            <span class="feature-icon icon-tools"></span>
+            <h3>QR Code</h3>
+            <p>Generate and decode QR content for provisioning, support, and field workflow needs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <div class="feature">
-        <img src="icon/mqtt.png" alt="MQTT">
-        <div class="feature-content">
-            <h2>MQTT</h2>
-            <p>Connect, publish, subsribe and add dynamic button.</p>
+    <section class="section" id="workflows">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Developer Workflows</p>
+          <h2>Useful from bring-up through validation.</h2>
         </div>
-    </div>
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <h3>Device and gateway debugging</h3>
+            <p>Check adapter details, validate reachability, inspect ports, open client sessions, and verify message exchange while keeping logs visible.</p>
+          </article>
+          <article class="workflow-card">
+            <h3>Protocol and payload testing</h3>
+            <p>Exercise TCP, UDP, serial, and MQTT paths with repeatable inputs before moving to production benches or field deployments.</p>
+          </article>
+          <article class="workflow-card">
+            <h3>Bench-side utilities</h3>
+            <p>Generate checksums, encode data, analyze live values, inspect BLE, and create support assets like QR or barcode content.</p>
+          </article>
+          <article class="workflow-card">
+            <h3>Firmware and release support</h3>
+            <p>Use controlled firmware workflows and visible confirmations to reduce operator mistakes during OTA or upgrade preparation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div class="feature">
-        <img src="icon/tcpclient.png" alt="TCP Client">
-        <div class="feature-content">
-            <h2>TCP Client</h2>
-            <p>Tcp Client </p>
+    <section class="section section-tinted" id="screens">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Screens</p>
+          <h2>Professional workspaces across the suite.</h2>
+          <p>The interface is organized as dedicated modules so developers can focus on one problem without losing the overall toolkit feel.</p>
         </div>
-    </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-card-wide">
+            <img src="./assets/screenshots/dashboard.png" alt="Porus Utility main dashboard">
+            <figcaption>Main dashboard with grouped IoT tool access and network shortcuts.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/continuous-ping.png" alt="Continuous ping window with stability graph">
+            <figcaption>Continuous ping with stability metrics, TTL tracking, and a live graph.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/network-details.png" alt="Network details cards with adapter info">
+            <figcaption>Network details summarized into compact adapter cards.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/port-checker.png" alt="Port checker view">
+            <figcaption>Port validation with quick latency checks and local IP support.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/port-scanner.png" alt="Port scanner list and filters">
+            <figcaption>Protocol-aware port scanner with filters and process visibility.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/tcp-client.png" alt="TCP client workspace">
+            <figcaption>TCP client for payload testing and server response review.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/tcp-server.png" alt="TCP server workspace">
+            <figcaption>TCP server with listener status, active client visibility, and exports.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/udp-client.png" alt="UDP client workspace">
+            <figcaption>UDP client for datagram-oriented transport tests.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/udp-server.png" alt="UDP server workspace">
+            <figcaption>UDP server for inbound traffic monitoring and activity logs.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/serial-communication.png" alt="Serial communication workspace">
+            <figcaption>Serial communication controls for COM-based device interaction.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/serial-terminal-lab.png" alt="Serial terminal lab">
+            <figcaption>Serial terminal lab with decoded, hex, and Base64 views.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/mqtt-client.png" alt="MQTT client workspace">
+            <figcaption>MQTT command center for publish, subscribe, and profile-driven broker access.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/tcp-socket.png" alt="TCP socket workspace">
+            <figcaption>Raw TCP socket workspace for advanced endpoint diagnostics.</figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <img src="./assets/screenshots/ble-explorer.png" alt="BLE scanner and GATT explorer">
+            <figcaption>BLE scanning and GATT exploration for Bluetooth-oriented workflows.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-    <div class="feature">
-        <img src="icon/tcpserver.png" alt="TCP Server">
-        <div class="feature-content">
-            <h2>TCP Server</h2>
-            <p>Tcp Server </p>
+    <section class="section">
+      <div class="container cta-panel">
+        <div>
+          <p class="eyebrow">Release Ready</p>
+          <h2>Download Porus Utility and start validating devices faster.</h2>
+          <p>Porus Utility is built for developers who need immediate visibility across networking, transport, messaging, serial links, BLE, and firmware support workflows.</p>
         </div>
-    </div>
-        <div class="feature">
-        <img src="icon/udpserver.png" alt="UDP Client">
-        <div class="feature-content">
-            <h2>UDP Client</h2>
-            <p>UDP Client </p>
+        <div class="cta-actions">
+          <a class="button button-primary" href="./downloads/Porus.exe" download>Download Porus.exe</a>
+          <a class="button button-secondary" href="mailto:main.thread.iot@gmail.com">Contact Thread-IoT</a>
         </div>
-    </div>
-     <div class="feature">
-        <img src="icon/udpserver1.png" alt="UDP Server">
-        <div class="feature-content">
-            <h2>UDP Server</h2>
-            <p>UDP Server </p>
-        </div>
-    </div>
-    <div class="feature">
-        <img src="icon/Qrcode.png" alt="QR Code Conversion">
-        <div class="feature-content">
-            <h2>QR Code Conversion</h2>
-            <p>Convert number to QR Code and QR code to number. </p>
-        </div>
-    </div>
-    <div class="feature">
-        <img src="icon/barcode.png" alt="Barcode Conversion">
-        <div class="feature-content">
-            <h2>Barcode Conversion</h2>
-            <p>Convert number to Bar Code and Bar code to number. </p>
-        </div>
-    </div>
-     <div class="feature">
-        <img src="icon/serial.png" alt="Serial Communication">
-        <div class="feature-content">
-            <h2>Serial Communication</h2>
-            <p>Connect and send - COM Port + upgrade firmware ( bin/hex file ). </p>
-        </div>
-    </div>
-    <div class="feature">
-        <img src="icon/serial.png" alt="Serial Communication">
-        <div class="feature-content">
-            <h2>Serial Communication</h2>
-            <p>Connect and send - COM Port + upgrade firmware ( bin/hex file ). </p>
-        </div>
-    </div>
-    <div class="feature">
-        <img src="icon/imagetobase.png" alt="Image to base64">
-        <div class="feature-content">
-            <h2>Base64 conversion</h2>
-            <p>string to base64, image to base64 , base64 to image. </p>
-        </div>
-    </div>
-</div>
-<footer>
-    <p>© 2025 Thread IoT. All rights reserved.</p>
-    <p>Contact us at <a href="mailto:main.thread.iot@gmail.com">main.thread.iot@gmail.com</a></p>
-</footer>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Thread-IoT</p>
+        <p>Porus Utility is an open desktop toolkit for IoT diagnostics, protocol validation, and device communication workflows.</p>
+      </div>
+      <div>
+        <p class="footer-title">Quick Links</p>
+        <a href="#features">Features</a>
+        <a href="#screens">Screenshots</a>
+        <a href="./downloads/Porus.exe" download>Download EXE</a>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <a href="mailto:main.thread.iot@gmail.com">main.thread.iot@gmail.com</a>
+        <a href="https://github.com/mainthreadiot/porus">GitHub Repository</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
