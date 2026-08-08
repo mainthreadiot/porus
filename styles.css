@@ -173,6 +173,15 @@ a {
   padding: 32px;
 }
 
+.trust-panel {
+  padding: 26px 30px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(201, 217, 238, 0.88);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
 .hero-copy-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -368,6 +377,40 @@ figcaption {
 .hero-shot figcaption {
   padding: 16px 20px 20px;
   background: rgba(255, 255, 255, 0.94);
+}
+
+.hash-box {
+  margin: 18px auto 14px;
+  padding: 16px 18px;
+  max-width: 100%;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(246, 249, 253, 0.96), rgba(255, 255, 255, 0.96));
+}
+
+.hash-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hash-box code {
+  display: block;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  word-break: break-all;
+  font-family: Consolas, "Courier New", monospace;
+}
+
+.trust-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
 .section {
