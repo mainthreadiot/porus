@@ -13,7 +13,7 @@ Contact: **main.thread.iot@gmail.com**
 
 Porus Utility is designed to simplify day-to-day engineering tasks such as network testing, port validation, protocol communication, telemetry inspection, firmware workflows, and barcode or QR generation. It combines multiple bench and support tools into a single desktop application with a consistent operator-focused interface.
 
-![Porus Dashboard](docs/assets/screenshots/dashboard.png)
+![Porus Dashboard](https://mainthreadiot.github.io/porus/assets/screenshots/dashboard.png)
 
 ## Key Features
 
@@ -83,34 +83,34 @@ Porus Utility is designed to simplify day-to-day engineering tasks such as netwo
 ## Screenshots
 
 ### Port Checker
-![Port Checker](docs/assets/screenshots/port-checker.png)
+![Port Checker](https://mainthreadiot.github.io/porus/assets/screenshots/port-checker.png)
 
 ### MQTT Utility
-![MQTT Utility](docs/assets/screenshots/mqtt-client.png)
+![MQTT Utility](https://mainthreadiot.github.io/porus/assets/screenshots/mqtt-client.png)
 
 ### TCP Client
-![TCP Client](docs/assets/screenshots/tcp-client.png)
+![TCP Client](https://mainthreadiot.github.io/porus/assets/screenshots/tcp-client.png)
 
 ### TCP Server
-![TCP Server](docs/assets/screenshots/tcp-server.png)
+![TCP Server](https://mainthreadiot.github.io/porus/assets/screenshots/tcp-server.png)
 
 ### UDP Client
-![UDP Client](docs/assets/screenshots/udp-client.png)
+![UDP Client](https://mainthreadiot.github.io/porus/assets/screenshots/udp-client.png)
 
 ### UDP Server
-![UDP Server](docs/assets/screenshots/udp-server.png)
+![UDP Server](https://mainthreadiot.github.io/porus/assets/screenshots/udp-server.png)
 
 ### Port Scanner
-![Port Scanner](docs/assets/screenshots/port-scanner.png)
+![Port Scanner](https://mainthreadiot.github.io/porus/assets/screenshots/port-scanner.png)
 
 ### Serial Communication
-![Serial Communication](docs/assets/screenshots/serial-communication.png)
+![Serial Communication](https://mainthreadiot.github.io/porus/assets/screenshots/serial-communication.png)
 
 ### Serial Terminal Lab
-![Serial Terminal Lab](docs/assets/screenshots/serial-terminal-lab.png)
+![Serial Terminal Lab](https://mainthreadiot.github.io/porus/assets/screenshots/serial-terminal-lab.png)
 
 ### BLE Explorer
-![BLE Explorer](docs/assets/screenshots/ble-explorer.png)
+![BLE Explorer](https://mainthreadiot.github.io/porus/assets/screenshots/ble-explorer.png)
 
 ## Built With
 
