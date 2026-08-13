@@ -1,58 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HFD29YX2C5');
-</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Porus Utility | Thread-IoT IoT Diagnostics and Protocol Toolkit</title>
-  <meta name="description" content="Porus Utility by Thread-IoT is a Windows desktop toolkit for IoT developers with port scanning, TCP and UDP tools, MQTT workflows, BLE exploration, serial diagnostics, network analysis, firmware upgrade support, live plotting, checksum tools, barcode, and QR utilities.">
-  <meta name="keywords" content="Porus Utility, Porus, Thread-IoT, IoT developer tools, MQTT client, port scanner, TCP client, UDP client, serial communication, BLE explorer, firmware upgrade utility, network diagnostics">
+  <title>Porus Utility | MQTT, TCP/UDP, Serial & IoT Testing Toolkit</title>
+  <meta name="description" content="Porus Utility is a free Windows toolkit for IoT and embedded developers: MQTT client, TCP/UDP testing, serial terminal, port scanner, BLE explorer, firmware validation, network diagnostics, checksums, QR and barcode tools.">
+  <meta name="keywords" content="IoT testing toolkit, embedded developer tools, MQTT client Windows, TCP client, UDP client, serial terminal, COM port tester, port scanner, BLE explorer, firmware validation, network diagnostics">
   <meta name="author" content="Thread-IoT">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0b2d52">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Porus Utility by Thread-IoT">
-  <meta property="og:description" content="A professional Windows toolkit for IoT diagnostics, protocol testing, MQTT, serial, BLE, networking, firmware workflows, and data utilities.">
+  <meta property="og:title" content="Porus Utility | IoT & Embedded Testing Toolkit">
+  <meta property="og:description" content="A free Windows toolkit for MQTT, TCP/UDP, serial, BLE, port diagnostics, firmware validation, and IoT device testing.">
   <meta property="og:url" content="https://mainthreadiot.github.io/porus/">
   <link rel="canonical" href="https://mainthreadiot.github.io/porus/">
   <meta property="og:image" content="https://mainthreadiot.github.io/porus/assets/screenshots/dashboard.png">
   <meta property="og:image:alt" content="Porus Utility dashboard screenshot">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Porus Utility by Thread-IoT">
-  <meta name="twitter:description" content="One Windows utility suite for network diagnostics, port validation, serial testing, BLE, MQTT, OTA workflows, and developer tooling.">
+  <meta name="twitter:title" content="Porus Utility | IoT & Embedded Testing Toolkit">
+  <meta name="twitter:description" content="Free Windows tools for MQTT, TCP/UDP, serial, BLE, port diagnostics, firmware validation, and IoT testing.">
   <meta name="twitter:image" content="https://mainthreadiot.github.io/porus/assets/screenshots/dashboard.png">
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="./site.webmanifest">
   <link rel="stylesheet" href="./styles.css">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HFD29YX2C5"></script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFD29YX2C5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HFD29YX2C5');
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Porus Utility",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Windows",
-    "description": "Porus Utility by Thread-IoT is a desktop toolkit for IoT developers covering network diagnostics, TCP and UDP testing, MQTT workflows, BLE exploration, serial communication, firmware upgrade support, and device data utilities.",
-    "creator": {
-      "@type": "Organization",
-      "name": "Thread-IoT",
-      "url": "https://mainthreadiot.github.io/porus/"
-    },
-    "downloadUrl": "https://mainthreadiot.github.io/porus/downloads/Porus.exe",
-    "softwareVersion": "1.0.0",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Thread-IoT",
+        "url": "https://mainthreadiot.github.io/porus/",
+        "email": "main.thread.iot@gmail.com"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Porus Utility",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Windows 10 or later",
+        "description": "Free Windows toolkit for IoT and embedded developers with MQTT, TCP/UDP, serial, BLE, port diagnostics, firmware validation, and data utilities.",
+        "creator": { "@type": "Organization", "name": "Thread-IoT" },
+        "url": "https://mainthreadiot.github.io/porus/",
+        "downloadUrl": "https://mainthreadiot.github.io/porus/downloads/Porus.exe",
+        "softwareVersion": "1.0.0",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": "MQTT client, TCP client and server, UDP client and server, serial terminal, port checker, port scanner, BLE explorer, firmware validation, checksum tools, QR and barcode tools"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Porus Utility used for?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Porus Utility helps IoT and embedded developers test MQTT, TCP, UDP, serial communication, BLE connectivity, ports, firmware workflows, and device payloads from one Windows desktop application." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Porus Utility include an MQTT client and serial terminal?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Porus Utility includes MQTT publish and subscribe workflows, plus serial communication and terminal tools for COM-port device testing." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which operating systems are supported?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Porus Utility is a Windows desktop application designed for Windows 10 or later with .NET Framework 4.6.2 or later." }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -82,12 +103,17 @@
       <div class="container hero-stack">
         <div class="hero-copy">
           <p class="eyebrow">Thread-IoT Professional Toolkit</p>
-          <h1 class="hero-title-full">The Porus Utility dashboard puts your entire IoT lab on one screen.</h1>
+          <h1 class="hero-title-full">IoT and embedded testing tools for MQTT, TCP/UDP, serial, BLE, and network diagnostics.</h1>
           <div class="hero-copy-grid">
             <div class="hero-copy-main">
-              <p class="hero-text">Lead with the dashboard, move into any tool in one click, and keep network diagnostics, protocol testing, MQTT, serial labs, BLE inspection, firmware workflows, and payload utilities inside one professional Windows workspace.</p>
+              <p class="hero-text">Porus Utility gives R&amp;D, firmware, QA, and integration engineers one Windows workspace for MQTT testing, TCP and UDP clients, serial communication, BLE inspection, port diagnostics, firmware workflows, and payload utilities.</p>
             </div>
-        
+            <div class="hero-copy-side">
+            <div class="hero-actions">
+                <a class="button button-primary" href="./downloads/Porus.exe" download>Download EXE</a>
+                <a class="button button-secondary" href="#screens">Explore Screens</a>
+              </div>
+            </div>
           </div>
           <ul class="hero-points">
             <li>Dashboard-first experience for faster first impression and faster workflows</li>
@@ -293,6 +319,29 @@
       </div>
     </section>
 
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common IoT and embedded testing questions.</h2>
+        </div>
+        <div class="workflow-grid">
+          <article class="workflow-card">
+            <h3>Need a Windows MQTT client for device testing?</h3>
+            <p>Use the MQTT Client to connect to a broker, publish device payloads, subscribe to topics, and reuse saved connection profiles during integration work.</p>
+          </article>
+          <article class="workflow-card">
+            <h3>Testing TCP, UDP, or a local service port?</h3>
+            <p>Use the TCP and UDP client/server tools, Port Checker, and Port Scanner to validate reachability, exchange payloads, inspect active connections, and identify owning processes.</p>
+          </article>
+          <article class="workflow-card">
+            <h3>Debugging a serial or Bluetooth device?</h3>
+            <p>Use Serial Communication, Serial Terminal Lab, and BLE Explorer to inspect interfaces, exchange messages, and review device data during bring-up and troubleshooting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-tinted" id="screens">
       <div class="container">
         <div class="section-heading">
@@ -386,6 +435,7 @@
         <p class="footer-title">Quick Links</p>
         <a href="#features">Features</a>
         <a href="#screens">Screenshots</a>
+        <a href="#faq">FAQ</a>
         <a href="./downloads/Porus.exe" download>Download EXE</a>
       </div>
       <div>
